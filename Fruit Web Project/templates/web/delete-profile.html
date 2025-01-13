@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=\, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static '/styles/styles.css' %}"/>
+    <title>Fruit Dictionary</title>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <a id="logo" href="#">
+            <img id="logo-img" src="{% static '/images/logo.png' %}" alt="logo"/>
+        </a>
+
+        <nav>
+            <div class="user">
+                <a href="{% url 'dashboard page' %}">Dashboard</a>
+                <a href="{% url 'fruit create page' %}">Add Fruit</a>
+                <a href="{% url 'profile details page' %}">Profile</a>
+            </div>
+
+            <div class="guest">
+
+                <a href="{% url 'profile create page' %}">Create Profile</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="edit">
+
+            <div class="form">
+                <h1>Are you sure you want to delete your profile?</h1>
+
+                <form id='delete' class="register-form">
+                    <button type="submit">Yes</button>
+
+                </form>
+            </div>
+            
+        </section>
+    </main>
+</div>
+<footer>
+    <p>@Fruit Dictionary. All rights reserved.</p>
+</footer>
+</body>
+</html>

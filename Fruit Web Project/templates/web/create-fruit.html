@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=\, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static '/styles/styles.css' %}"/>
+    <title>Fruit Dictionary</title>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <a id="logo" href="#">
+            <img id="logo-img" src="{% static '/images/logo.png' %}" alt="logo"/>
+        </a>
+
+        <nav>
+            <div class="user">
+                <a href="{% url 'dashboard page' %}">Dashboard</a>
+                <a href="{% url 'fruit create page' %}">Add Fruit</a>
+                <a href="{% url 'profile details page' %}">Profile</a>
+            </div>
+
+            <div class="guest">
+
+                <a href="{% url 'profile create page' %}">Create Profile</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="create">
+            <div class="form">
+                <h2>Add Fruit</h2>
+                <form class="create-form">
+                    {# <input#}
+                    {# type="text"#}
+                    {# name="name"#}
+                    {# id="name"#}
+                    {# placeholder="Fruit Name"#}
+                    {# />#}
+                    {# <input#}
+                    {# type="text"#}
+                    {# name="imageUrl"#}
+                    {# id="Fruit-image"#}
+                    {# placeholder="Fruit Image URL"#}
+                    {# />#}
+                    {# <textarea#}
+                    {# id="fruit-description"#}
+                    {# name="description"#}
+                    {# placeholder="Fruit Description"#}
+                    {# rows="10"#}
+                    {# cols="50"#}
+                    {# ></textarea>#}
+                    {# <textarea#}
+                    {# id="fruit-nutrition"#}
+                    {# name="nutrition"#}
+                    {# placeholder="Nutrition Info"#}
+                    {# rows="10"#}
+                    {# cols="50"#}
+                    {# ></textarea>#}
+                    {% csrf_token %}
+                    {{ add_form }}
+                    <button type="submit">Add Fruit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</div>
+<footer>
+    <p>@Fruit Dictionary. All rights reserved.</p>
+</footer>
+</body>
+</html>

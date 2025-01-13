@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=\, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}"/>
+    <title>Fruit Dictionary</title>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <a id="logo" href="{% static 'images/logo.png' %}">
+            <img id="logo-img" src="{% static 'images/logo.png' %}" alt="logo"/>
+        </a>
+
+        <nav>
+            {% block main_content_profile %}
+            <div class="user">
+                <a href="{% url 'dashboard page' %}">Dashboard</a>
+                <a href="{% url 'fruit create page' %}">Add Fruit</a>
+                <a href="{% url 'profile details page' %}">Profile</a>
+            </div>
+            {% endblock %}
+
+            {%  block main_content_no_profile %}
+            <div class="guest">
+
+                <a href="{% url 'profile create page' %}">Create Profile</a>
+
+            </div>
+            {% endblock %}
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+          <h1>Learn more about your favorite fruits</h1>
+          <img
+            src="{% static '/images/pexels-pixabay-161559-dImkWBDHz-transformed (1).png' %}"
+            alt="home"
+          />
+
+        </section>
+
+      </main>
+    </div>
+    <footer>
+      <p>@Fruit Dictionary. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

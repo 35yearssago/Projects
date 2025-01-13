@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=\, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static '/styles/styles.css' %}"/>
+    <title>Fruit Dictionary</title>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <a id="logo" href="#">
+            <img id="logo-img" src="{% static '/images/logo.png' %}" alt="logo"/>
+        </a>
+
+        <nav>
+
+            <div class="user">
+                <a href="{% url 'dashboard page'%}">Dashboard</a>
+                <a href="{% url 'fruit create page'%}">Add Fruit</a>
+                <a href="{% url 'profile details page'%}">Profile</a>
+            </div>
+
+            <div class="guest">
+
+                <a href="{% url 'profile create page'%}">Create Profile</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Fruits</h2>
+        <section id="dashboard">
+
+            <div class="fruit">
+                <img src="{% static '/images/fruit%201.png' %}" alt="example1"/>
+                <h3 class="title">Pineapple</h3>
+                <p class="description">The pineapple is a tropical plant with an edible f...</p>
+                <a class="details-btn" href="{% url 'fruit details page' id=fruit.id%}">More Info</a>
+            </div>
+
+            <div class="fruit">
+                <img src="/images/fruit%202.png" alt="example1"/>
+                <h3 class="title"> Kiwi</h3>
+                <p>Kiwifruit (often shortened to kiwi in North Americ...</p>
+                <a class="details-btn" href="#">More Info</a>
+            </div>
+
+            <div class="fruit">
+                <img src="/images/fruit%203.png" alt="example1"/>
+                <h3 class="title">Banana</h3>
+                <p>A banana is an elongated, edible fruit – botanical...</p>
+                <a class="details-btn" href="#">More Info</a>
+            </div>
+
+        </section>
+
+        <h2>No fruit info yet.</h2>
+
+    </main>
+</div>
+<footer>
+    <p>@Fruit Dictionary. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=\, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static '/styles/styles.css' %}"/>
+    <title>Fruit Dictionary</title>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+
+        <a id="logo" href="#">
+            <img id="logo-img" src="{% static '/images/logo.png' %}" alt="logo"/>
+        </a>
+
+        <nav>
+
+            <div class="user">
+                <a href="{% url 'dashboard page' %}">Dashboard</a>
+                <a href="{% url 'fruit create page' %}">Add Fruit</a>
+                <a href="{% url 'profile details page' %}">Profile</a>
+            </div>
+
+            <div class="guest">
+
+                <a href="{% url 'profile create page' %}">Create Profile</a>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section id="details">
+            <div id="details-wrapper">
+                <h2>Profile Details</h2>
+
+                <img id="details-img" src="https://images.pexels.com/photos/3792581/pexels-photo-3792581.jpeg"
+                     alt="profile img"/>
+
+
+                <img id="details-img" src="/images/default.jpg" alt="profile img"/>
+
+
+                <p id="details-title">Mariya Petrova</p>
+
+                <div id="info-wrapper">
+                    <div id="details-description">
+                        <p>
+                            mariya@abv.bg
+                        </p>
+                        <p>
+                            Age: 18
+                        </p>
+                        <p id="nutrition">Posts: 3</p>
+                    </div>
+
+
+                    <div id="action-buttons">
+                        <a href="#" id="edit-btn">Edit</a>
+                        <a href="#" id="delete-btn">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+<footer>
+    <p>@Fruit Dictionary. All rights reserved.</p>
+</footer>
+</body>
+</html>
