@@ -1,0 +1,8 @@
+[2024-12-05 12:46:58]  joined the chat.
+[2024-12-05 12:46:58]  left the chat.
+[2024-12-05 13:40:15] anton connected from ('127.0.0.1', 50907)
+[2024-12-05 13:41:27] Connection lost with anton
+[2024-12-05 13:41:27] anton disconnected.
+[2024-12-05 13:42:52] Anton connected from ('127.0.0.1', 50964)
+[2024-12-05 13:42:56] Connection lost with Anton
+[2024-12-05 13:42:56] Anton disconnected.
